@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 15:56:14 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/11 19:49:11 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/12 19:59:52 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 # define BUF_SIZE 4096
 
 void				*ft_memset(void *b, int c, size_t len);
-//b
-//
+void				ft_bzero(void *s, size_t n);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int					ft_strlen(char const *s);
 char				*ft_strdup(char *src);
 char				*ft_strcpy(char *dest, char *src);

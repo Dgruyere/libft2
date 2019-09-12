@@ -11,8 +11,12 @@ int main(void)
 	char s[5] = "abc";
 	char satoi1[10] = "111";
 	char satoi[3] = "22";
+	char *ptr, *ptr1;
 	ft_putstr(s);
 	ft_putendl(s);
+	ptr = ft_strdup("lol");
+	ptr1 = strdup("lol");
+	printf("\nft_strdup(\"lol\") = %s\nstrdup(\"lol\") = %s\n", ptr, ptr1);
 	ft_putchar('1');
 	ft_putchar('\n');
 	ft_putchar('2');

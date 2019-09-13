@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 15:32:33 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/11 17:26:07 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/13 19:43:19 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-
-	i = 0;
-	while (s1[i])
-	{
-		s1[i + ft_strlen(s1)] = s2[i];
-		i++;
-	}
+	ft_strcpy(s1 + ft_strlen(s1), (char*)s2);
 	return (s1);
 }

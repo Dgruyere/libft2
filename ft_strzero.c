@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 13:30:10 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/13 18:33:54 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/13 18:40:44 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/13 19:43:20 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+char	*ft_strzero(char *s, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (s1[i] != s2[i])
-			return (0);
+		if (!(s[i]))
+			return (s);
 		i++;
 	}
-	return (1);
+	s[i - 1] = '\0';
+	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 23:01:09 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/11 14:04:08 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/17 15:24:29 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 
 	i = 0;
 	j = 0;
-	if (to_find == '\0')
+	if (to_find[0] == '\0')
 		return ((char*)str);
 	while (str[i] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 12:33:37 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/17 14:19:26 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/17 14:59:10 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
+	if (c == 0)
+		res = (char*)&s[i];
 	return (res);
 }

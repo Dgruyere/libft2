@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 13:29:26 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/18 16:19:53 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/18 16:21:04 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/18 17:30:33 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+#include "libft.h"
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	char *res;
 	int i;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i])
+	res = NULL;
+	if (!s || !(res = (char*)ft_memalloc(len + 1)))
+		return (NULL);
+	while ((int)len > 0)
 	{
-		if (s1[i] != s2[i])
-			return (0);
+		res[i] = s[start];
+		start++;
+		len--;
 		i++;
 	}
-	return (1);
+	res[i] = '\0';
+	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 13:17:06 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/10 13:49:13 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/18 22:45:16 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char const *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar('\n');
+	ft_putchar_fd('\n', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 13:28:50 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/11 17:56:18 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/18 22:34:20 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr(char const *s)
 {
 	int i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

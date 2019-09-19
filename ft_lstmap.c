@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 15:29:23 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/19 20:06:55 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/19 21:25:15 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/19 21:41:14 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list				*ft_lstmap(t_list *lst, void (*f)(t_list *elem))
 {
-	size_t			i;
-	unsigned char	d;
-	unsigned char	*p;
-
-	i = 0;
-	d = (unsigned char)c;
-	p = (unsigned char*)s;
-	while (i < n)
-	{
-		if (p[i++] == d)
-			return (p + i - 1);
-	}
-	return (NULL);
+	t_list *res;
+	return (res);
 }

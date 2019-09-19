@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 14:40:56 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/13 15:10:56 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/19 19:58:53 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			i++;
 		}
 	}
-	return(dst);
+	return (dst);
 }

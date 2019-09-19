@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 14:37:55 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/19 18:10:26 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/19 20:06:07 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ unsigned int		getnbsize(int n)
 	unsigned int size;
 
 	size = 0;
-
 	while (n /= 10)
 		size++;
 	return (size + 1);
@@ -32,10 +31,9 @@ char				*ft_itoa(int n)
 
 	size = getnbsize(n);
 	if (n < 0)
-	{
 		nb = (unsigned int)(-n);
+	if (n < 0)
 		size++;
-	}
 	else
 		nb = (unsigned int)(n);
 	if (!(res = (char*)malloc(sizeof(char) * (size + 1))))

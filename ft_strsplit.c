@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 20:13:01 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/18 22:33:01 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/19 19:56:02 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int		wlencounter(char const *s, char c, int i)
 	return (j);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char				**res;
 	unsigned int		i;
@@ -55,7 +55,7 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			if(!(res[k] = ft_strsub(s, i, wlencounter(s, c, i))))
+			if (!(res[k] = ft_strsub(s, i, wlencounter(s, c, i))))
 				return (NULL);
 			k++;
 			i += wlencounter(s, c, i);

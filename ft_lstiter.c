@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 15:29:23 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/19 20:06:55 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/19 20:53:20 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/19 21:44:43 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	size_t			i;
-	unsigned char	d;
-	unsigned char	*p;
+	t_list *iter;
 
-	i = 0;
-	d = (unsigned char)c;
-	p = (unsigned char*)s;
-	while (i < n)
+	iter = lst;
+	if (!lst && !f)
 	{
-		if (p[i++] == d)
-			return (p + i - 1);
+		while (iter)
+		{
+			(*f)(iter);
+			iter = iter->next;
+		}
 	}
-	return (NULL);
 }

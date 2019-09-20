@@ -6,10 +6,10 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 21:25:15 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/20 17:50:12 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/20 18:33:49 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 #include "libft.h"
 
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
@@ -37,4 +37,4 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		current = current->next;
 	}
 	return(newList);
-}
+}*/

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstgetnth.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/19 20:32:59 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/20 13:23:20 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/20 13:31:29 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/20 13:59:22 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+t_list *ft_lstgetnth(t_list *lst, int n)
 {
-	if (alst != NULL && del != NULL)
+	int count;
+
+	while (lst)
 	{
-		(*del)((*alst)->content, (*alst)->content_size);
-		ft_memdel((void **)alst);
+		while (count < n && lst)
+		{
+			lst = lst->next;
+			count++;
+		}
+		return (lst);
 	}
 }

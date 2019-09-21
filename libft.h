@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 15:56:14 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/20 19:48:41 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/21 19:29:31 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t				ft_strnlen(char *dst, size_t n);				
+size_t				ft_strnlen(char *dst, size_t n);
+int					ft_lstsize(t_list **head);
+int					ft_max(int d1, int d2);
+int					ft_min(int d1, int d2);
+void				ft_swap(int *a, int *b);
 
 #endif

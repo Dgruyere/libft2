@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstgetnth.c                                     :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 13:31:29 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/20 13:59:22 by dgruyere         ###   ########.fr       */
+/*   Created: 2019/09/21 18:21:02 by dgruyere          #+#    #+#             */
+/*   Updated: 2019/09/21 18:24:01 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstgetnth(t_list *lst, int n)
-{
-	int count;
+#include "libft.h"
 
-	while (lst)
-	{
-		while (count < n && lst)
-		{
-			lst = lst->next;
-			count++;
-		}
-		return (lst);
-	}
+int	ft_max(int d1, int d2)
+{
+	return (d1 > d2 ? d1 : d2);
 }

@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 20:13:01 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/19 19:56:02 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/21 20:19:10 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,27 +41,47 @@ static int		wlencounter(char const *s, char c, int i)
 	return (j);
 }
 
-char			**ft_strsplit(char const *s, char c)
+static int		tomake25lines(int i, char **res, char const *s, char c)
 {
-	char				**res;
-	unsigned int		i;
-	unsigned int		k;
+	int k;
 
-	i = 0;
 	k = 0;
-	if (!s || !(res = (char**)malloc(sizeof(char**) * (wcounter(s, c) + 1))))
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
 			if (!(res[k] = ft_strsub(s, i, wlencounter(s, c, i))))
-				return (NULL);
+			{
+				while (k)
+				{
+					free(res[k]);
+					k--;
+				}
+				break ;
+			}
 			k++;
 			i += wlencounter(s, c, i);
 		}
 		else
 			i++;
+	}
+	return (k);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	int					k;
+	char				**res;
+	unsigned int		i;
+
+	i = 0;
+	if (!s || !(res = (char**)malloc(sizeof(char**) * (wcounter(s, c) + 1))))
+		return (NULL);
+	k = tomake25lines(i, res, s, c);
+	if (!k && wcounter(s, c))
+	{
+		free(res);
+		return (NULL);
 	}
 	res[k] = NULL;
 	return (res);

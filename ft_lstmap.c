@@ -6,35 +6,34 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 21:25:15 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/20 18:33:49 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/21 18:49:50 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*lst_dup;
-	t_list	*res; //первый элемент нового списка
-	t_list	*restail; //последний элемент нового списка
-	
-	lst_dup = f(lst);
-	res = NULL;
-	restail = NULL;
-	while (lst)
-	{
+	t_list	*result;
+	t_list	*tmpresult;
+	t_list	*tmplst;
 
-		if (!(lstnew(lst_dup->content, lst_dup->content_size)))
+	if (!lst || !f)
+		return (NULL);
+	tmplst = f(lst);
+	if ((result = ft_lstnew(tmplst->content, tmplst->content_size)))
+	{
+		tmpresult = result;
+		lst = lst->next;
+		while (lst != NULL)
 		{
+			tmplst = (*f)(lst);
+			if (!(tmpresult->next = ft_lstnew(tmplst->content,
+							tmplst->content_size)))
+				return (NULL);
+			tmpresult = tmpresult->next;
+			lst = lst->next;
 		}
-		else
-		{
-			tail->next = malloc(sizeof(struct node));
-			tail = tail->next;
-			tail->data = current->data;
-			tail->next = NULL;
-		}
-		current = current->next;
 	}
-	return(newList);
-}*/
+	return (result);
+}

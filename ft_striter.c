@@ -6,13 +6,13 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 15:02:36 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/18 15:26:00 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/22 14:32:17 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char*))
 {
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (*s)
 		f(s++);

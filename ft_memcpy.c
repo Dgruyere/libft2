@@ -6,7 +6,7 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 19:00:42 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/19 19:59:48 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/22 15:19:17 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*p1;
 
 	i = 0;
-	if (!(dst) && !(src))
+	if (dst == src)
 		return (dst);
 	p = (char*)dst;
 	p1 = (char*)src;

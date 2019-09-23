@@ -6,13 +6,15 @@
 /*   By: dgruyere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 13:30:53 by dgruyere          #+#    #+#             */
-/*   Updated: 2019/09/10 13:47:05 by dgruyere         ###   ########.fr       */
+/*   Updated: 2019/09/23 17:53:25 by dgruyere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char const *s)
+#include "libft.h"
+
+size_t	ft_strlen(char const *s)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s[i])
